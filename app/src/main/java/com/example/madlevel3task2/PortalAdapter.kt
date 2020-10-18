@@ -10,10 +10,18 @@ import kotlinx.android.synthetic.main.item_portal.view.*
 
 public class PortalAdapter(private val portals: List<Portal>) :
     RecyclerView.Adapter<PortalAdapter.ViewHolder>() {
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    var onItemClick: ((Portal) -> Unit)? = null
+
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        init {
+            itemView.setOnClickListener {
+                onItemClick?.invoke(portals[adapterPosition])
+            }
+        }
+
         fun databind(portal: Portal) {
-            portal.title = itemView.etTitle.text.toString()
-            portal.url = itemView.etUrl.toString()
+            itemView.tvPortal.text = portal.title
+            itemView.tvUrl.text = portal.url
         }
     }
 

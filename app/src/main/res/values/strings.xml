@@ -10,7 +10,10 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
-    <string name="addTitle">Title</string>
-    <string name="addUrl">Url</string>
+    <string name="addTitle">Name</string>
+    <string name="addUrl">http://</string>
     <string name="addPortal">Add Portal</string>
+    <string name="not_valid_portal">Invalid portal</string>
+    <string name="portal">Portal</string>
+    <string name="see_below">See below for all your portals</string>
 </resources>

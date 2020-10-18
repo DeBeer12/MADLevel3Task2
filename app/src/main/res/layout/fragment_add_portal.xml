@@ -4,38 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPortalFragment">
+    tools:context=".AddReminderFragment">
 
     <Button
         android:id="@+id/btnAddPortal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
         android:text="@string/addPortal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUrl"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addPortal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/addTitle"
+        android:layout_width="402dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="104dp"
         android:ems="10"
+        android:hint="@string/addTitle"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/addTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <EditText
         android:id="@+id/etUrl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/addUrl"
+        android:layout_width="402dp"
+        android:layout_height="51dp"
         android:ems="10"
+        android:inputType="textUri"
+        android:selectAllOnFocus="false"
         android:text="@string/addUrl"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddPortal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/etTitle"
+        app:layout_constraintVertical_bias="0.108"
+        tools:text="@string/addUrl" />
 </androidx.constraintlayout.widget.ConstraintLayout>
